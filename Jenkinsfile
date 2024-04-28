@@ -6,9 +6,9 @@ pipeline {
     }
 
     stages {
-        stage('Hello') {
+        stage('clone code') {
             steps {
-                git branch: 'main', url: 'https://github.com/viswkum/ttrend.git'
+                git 'https://github.com/viswkum/ttrend.git'
             }
         }
     }
