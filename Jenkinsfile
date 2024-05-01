@@ -4,4 +4,13 @@ pipeline {
             label 'maven_slave'
         }
     }
+    stages {
+        stage('clone') {
+            steps {
+                git 'https://github.com/viswkum/ttrend.git'
+            }
+        }
+    }
 }
+
+
