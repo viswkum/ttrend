@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'maven_slave'
+            label 'maven-agent'
         }
     }
 environment {
@@ -15,7 +15,7 @@ environment {
         }
         stage('build') {
             steps {
-                sh 'mvn clean deploy'
+                sh 'mvn clean install'
             }
         }
     }
